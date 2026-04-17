@@ -2,9 +2,9 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <!-- Resolve o erro de favicon no console (Obrigatório para limpar o log) -->
+
   <link rel="icon" href="data:,">
-  <title>Resgate de Projeto</title>
+  <title></title>
   
   <style>
     /* Interface Bonita (Melhoria PLUS) */
@@ -58,13 +58,12 @@
 
   <script>
   function buscarDados(){
-    // URL correta e fetch dentro da função
+    
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then(res => res.json())
       .then(dados => {
         let lista = document.getElementById("lista")
-        // .slice(0, 10) para exibir apenas os 10 primeiros de forma organizada
-        // .join('') para remover as vírgulas entre os itens
+        
         lista.innerHTML = dados.slice(0, 10).map(item => `
           <li>
             <strong>Título:</strong> ${item.title}
@@ -80,4 +79,3 @@
 
 </body>
 </html>
-
